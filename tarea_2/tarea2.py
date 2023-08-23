@@ -428,7 +428,7 @@ while True:    # bucle principal del programa
                 gente = funciones.poblacion(url,paises[pais],"2022")#solicita a la API el valor para cada país
                 matplot.bar(pais,gente[0]['value'])#crea una barra para cada país y le asigna el valor obtenido
                 print("       •")# para ilustrar en consola que algo esta pasando ya que los calls a la API pueden tomar algo de tiempo
-            matplot.ticklabel_format(style='sci', axis='y',scilimits=(6,6))#modifica los números del eje y, en estilo científico para ocupar demasiado espacio y limita la notación para que esté en magnitud de millones
+            matplot.ticklabel_format(style='sci', axis='y',scilimits=(6,6))#modifica los números del eje y, en estilo científico para no ocupar demasiado espacio y limita la notación para que esté en magnitud de millones
             matplot.xticks(range(0,10),paises.keys(),rotation=30)#setea las pocisiones de las barras en el eje x, las etiquetas para cada una y una rotacion de 30 grados
             matplot.title("Los 10 países con mayor población en el mundo para el 2022")
             matplot.ylabel("Millones")
